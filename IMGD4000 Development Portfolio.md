@@ -65,7 +65,7 @@ TEXT("AnimBlueprint'/Game/Characters/.../CharacterAnimationBP.CharacterAnimation
   We accomplished our animation with animation state machine blueprint. There are two types of animations: 1) looping animation and 2) one time animation. For example, moving animation is a looping animation since you want to play it when you are moving, while punching is an one time animation since you don't want to it punch all the time while you are not punching. We had a problem with the one time animation, because you cannot simply change the state by checking "isAttacking" is true or false. It turns out that you can achieve this by something called time remaining ratio in animation state machine. Basically you can use isAttacking == true to enter the state, and Time Remaining Ratio <= 0.05 to exit the state. By this way you can avoid loop callings and exit correctly.
 
 ## Architectural Diagram For The Project
-Check IMGD4000 Final Project UML.pdf
+Check IMGD4000 Final Project.pdf
 
 ## Version Control Choice
 We chose to use perforce, since it is said that perforce can support binary files (blueprints, level files, etc. in unreal are binary files) better than github. However, we really had a hard time with perforce. Here are some challenges and potential fixes to perforce.
